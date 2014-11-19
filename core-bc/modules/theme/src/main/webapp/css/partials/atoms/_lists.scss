@@ -1,0 +1,146 @@
+#app-wrapper {
+	width: 800px;
+	position: relative;
+	margin: 0 auto;	
+}
+
+.appbar {
+    position: absolute;
+    width: 100%;
+    z-index: 3;  
+    height: 56px;
+    background-color: $color-blue;
+	@include text-inverse();
+	@include link-inverse();
+    @extend .shadow-z-1;
+    transition: background-color 500ms, box-shadow 500ms;
+}
+
+
+
+.app-title {
+    cursor: default;
+    display: inline-block;
+    font-size: 24px;
+    font-weight: normal;
+    margin: 0;
+    line-height: 56px;    
+}
+
+#appbar-menu-button {
+	cursor: pointer;
+    background: none;
+    border: none;
+	@include text-inverse();
+
+    outline: none;
+
+    padding: 16px;
+    height: 24px;
+    width: 24px;
+
+    float: left;
+
+
+ 	&:hover {
+    	color: #c1c1c1;
+	}
+
+	&:active {
+    	color: #919191;
+	}
+}
+
+.app-body {
+	padding-top: 56px;
+}
+
+
+// #mainmenu { background-color: rgb(220, 170, 170); } 
+// #submenu { background-color: rgb(170, 220, 170); } 
+// #section { background-color: rgb(170, 170, 220); } 
+
+
+.screen {
+    display: none;
+	position: absolute;
+	width: 100%;
+    background-color: $color-white;
+
+    &.active {
+        display: block;
+    }
+}
+
+.section-details {
+    padding: 14px 16px;
+}
+
+
+// LIST 
+
+.list-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    display: block;
+    opacity: 1;
+}
+
+.list-item-text {
+    cursor: inherit;
+    @extend .typo-list;
+    padding: 14px 16px;
+}
+
+
+
+
+
+
+.md-tabs {
+
+    width: 100%;
+
+    @extend .typo-list;
+
+    @extend .shadow-z-2-no-top;
+
+    .tab {
+        display: block;
+        width: 50%;
+        box-sizing: border-box;
+        padding: 14px 16px 12px 14px;
+        float: left;
+        text-align: center;
+
+        background-color: $tabs-background-color;
+        border-bottom: 2px solid $tabs-background-color;
+
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 500;
+
+        &.selected {
+            border-bottom-color: $tabs-marking-color;
+        }
+    }
+
+
+    a {
+        color: $tabs-color;
+
+        &:visited {
+            color: $tabs-color;             
+        }
+
+        &:active {
+            color: $tabs-color;             
+        }           
+
+        &:hover {
+            color: $tabs-color;             
+        }
+    }
+
+
+}
