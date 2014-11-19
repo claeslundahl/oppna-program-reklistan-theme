@@ -1,0 +1,9 @@
+$body-background-color: $color-gray-gallery;
+
+body {
+	@include text-color-primary();
+	background-color: $body-background-color;
+
+	font-family: 'Roboto', sans-serif;
+	font-weight: 400;	
+}
